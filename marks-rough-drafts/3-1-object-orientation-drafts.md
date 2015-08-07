@@ -2,6 +2,8 @@
 
 ## Objectives
 
+
+
 ## Public vs Private
 
 So far, all of the properties and methods that we've either shown to you in examples or had you write in labs have been *public*. Like playing around in the open of your front yard, this means that everything you've been doing so far has been *visible* to outside classes. Much of the time, this can be appropriate—but not always.
@@ -10,6 +12,7 @@ So far, all of the properties and methods that we've either shown to you in exam
 —*"Private Property" sign on a chain link fence*, David Lottito, 2010. [Wikipedia Commons](https://en.wikipedia.org/wiki/File:Private_Property_Sign_on_Fence.jpg)
 
 ====not finished====
+
 
 ## `@interface`: `.h` vs `.m`
 
@@ -93,26 +96,77 @@ So, an incomplete representation of that radio in Objective-C might look somethi
 
 ### The `readonly` & `readwrite` Property Options
 
-The `readonly` property option does just that: it makes the property unwritable, or "read only". 
+The `readonly` property option does just that: it makes the property unwritable, or "read only". It accomplishes this by creating the property *without* an associated "getter" method (more on this below). In order to write to the property privately, the property must be redeclared *privately* as `readwrite`.
+
+
+
 
 ## The Anatomy Of A Property
 
+Using the `@property` syntax, while it can feel verbose, is actually  a shorthand for generating the three components of a property: the instance variable, the "setter" method, and the "getter" method.
 
-When we set up our `Warship` class, its member variables `name`, `length`, `beam`, `keel`, etc., would most likely get programmed as *properties*. A **property** generally refers to a toolset of three things: an instance variable, a setter method, and a getter method.
+#### The Instance Variable
 
-The **instance variable** is the actual piece of data that the property manages, typically named after the property but prefixed with and underscore (`_`).
+The **instance variable** is the actual value that the property manages. It is both standard convention and implicit syntax that the instance variable is name after the property, but prepends an underscore character (`_`). So, `_length` is the *instance variable* managed by the `length` property, and `_count` is the *instance variable* managed by the `count` property.
 
-The **setter** is a method that is responsible for writing to the instance variable, typically named after the property that it writes to (or "sets"), but is prefixed with "`set`", as in `setLength:` for the `length` property.
+**Note:** *Do* ***not*** *access an instance variable directly unless writing an initializer (common) or overriding a setter or getter (advanced). It best practice to use dot notation which implicitly calls the setter and getter methods for that property.*
 
-The **getter** is a method that is responsible for reading the instance variable, typically named after the property whose value it retrieves (or "gets"), as in `length` (method) for the `length` property.
+#### The Setter Method
 
-**Advanced:** *A read-only property is, in effect, just an instance variable with no associated setter method—only a getter method.*
+The **setter** is a method that is responsible for *writing to* (or "setting") the instance variable. It is both convention and implicit syntax that the setter is named after property and prefixed with the word "set". The setter for the `length` property would be called `setLength:`, and the setter for the `count` property would be called `setCount:`. However, dot notation implicitly calls the setter method when used on the left side of an assignment operator:
 
-Whenever possible, use the setters and getters to interact with an instance variable. Avoid modifying it directly.
+```objc
+// good style
 
-You've already interacted with the `count` getter method on arrays:
+self.length = 10;
+```
+This is equivalent to:
 
+```objc
+// bad style
 
+[self setLength:10];
+```
+
+#### The Getter Method
+
+The **getter** is a method that is responsible for *reading from* (or "getting") the instance variable. It is both convention and implicit syntax that the getter is named directly after the property whose value it retrieves (though some `BOOL` properties prepend the word "is" to the getter). The getter for the `length` property would be a method called `length`, and the getter for the `count` property would be called `count`. Dot notation implicitly calls the getter method whenever it is submitted as an argument, or is used on the right side of an assignment operator:
+
+```objc
+// good style
+
+NSUInteger thisLength = self.length;
+[mutableArray addObject:@(self.length) ];
+```
+These are equivalent to:
+
+```objc
+// bad style
+
+NSUInteger thisLength = [self length];
+[mutableArray addObject:@([self length]) ];
+```
+
+Some of the methods which we have used in previous examples are actually the getter methods for properties:
+
+```objc
+// using getter methods
+
+NSString *welcome = @"Welcome to the Flatiron School!";
+NSString *welcomeUC = [welcome uppercaseString];
+
+NSLog(@"%@", welcomeUC);
+```
+This is equivalent to:
+
+```objc
+// using dot notation to access the property
+
+NSString *welcome = @"Welcome to the Flatiron School!";
+
+NSLog(@"%@", welcome.uppercaseString);
+```
+These will both print: `WELCOME TO THE FLATIRON SCHOOL!`.
 
 
 
