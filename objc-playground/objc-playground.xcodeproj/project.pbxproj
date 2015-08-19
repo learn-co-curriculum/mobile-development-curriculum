@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8972BB1B84CA0E00069204 /* FISRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8972BA1B84CA0E00069204 /* FISRadio.m */; };
 		4DC659201B74FEE70040D00B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6591F1B74FEE70040D00B /* main.m */; };
 		4DC659231B74FEE70040D00B /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC659221B74FEE70040D00B /* FISAppDelegate.m */; };
 		4DC659291B74FEE70040D00B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC659271B74FEE70040D00B /* Main.storyboard */; };
 		4DC6592B1B74FEE70040D00B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6592A1B74FEE70040D00B /* Images.xcassets */; };
 		4DC6592E1B74FEE70040D00B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6592C1B74FEE70040D00B /* LaunchScreen.xib */; };
 		4DC6593A1B74FEE70040D00B /* objc_playgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC659391B74FEE70040D00B /* objc_playgroundTests.m */; };
-		4DC659451B750CCA0040D00B /* FISRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC659441B750CC90040D00B /* FISRadio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D8972B91B84CA0E00069204 /* FISRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISRadio.h; sourceTree = "<group>"; };
+		4D8972BA1B84CA0E00069204 /* FISRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISRadio.m; sourceTree = "<group>"; };
 		4DC6591A1B74FEE70040D00B /* objc-playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC6591E1B74FEE70040D00B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC6591F1B74FEE70040D00B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,8 +40,6 @@
 		4DC659331B74FEE70040D00B /* objc-playgroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-playgroundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DC659381B74FEE70040D00B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DC659391B74FEE70040D00B /* objc_playgroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_playgroundTests.m; sourceTree = "<group>"; };
-		4DC659431B750CC90040D00B /* FISRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISRadio.h; sourceTree = "<group>"; };
-		4DC659441B750CC90040D00B /* FISRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISRadio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				4DC659211B74FEE70040D00B /* FISAppDelegate.h */,
 				4DC659221B74FEE70040D00B /* FISAppDelegate.m */,
-				4DC659431B750CC90040D00B /* FISRadio.h */,
-				4DC659441B750CC90040D00B /* FISRadio.m */,
+				4D8972B91B84CA0E00069204 /* FISRadio.h */,
+				4D8972BA1B84CA0E00069204 /* FISRadio.m */,
 				4DC659271B74FEE70040D00B /* Main.storyboard */,
 				4DC6592A1B74FEE70040D00B /* Images.xcassets */,
 				4DC6592C1B74FEE70040D00B /* LaunchScreen.xib */,
@@ -221,7 +221,7 @@
 			files = (
 				4DC659231B74FEE70040D00B /* FISAppDelegate.m in Sources */,
 				4DC659201B74FEE70040D00B /* main.m in Sources */,
-				4DC659451B750CCA0040D00B /* FISRadio.m in Sources */,
+				4D8972BB1B84CA0E00069204 /* FISRadio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +416,7 @@
 				4DC6593F1B74FEE70040D00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DC659401B74FEE70040D00B /* Build configuration list for PBXNativeTarget "objc-playgroundTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				4DC659421B74FEE70040D00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

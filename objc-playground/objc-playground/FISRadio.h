@@ -11,23 +11,10 @@
 
 @interface FISRadio : NSObject
 
-@property (nonatomic) CGFloat swBal;
-@property (nonatomic) CGFloat tuning;
+@property (nonatomic, readonly) CGFloat amFrequency;
+@property (nonatomic, readonly) CGFloat fmFrequency;
 
-@property (nonatomic, readonly) CGFloat amTuning;
-@property (nonatomic, readonly) CGFloat fmTuning;
-
-@property (nonatomic) CGFloat tone;
-@property (nonatomic) CGFloat volume;
-
-@property (nonatomic, readonly) BOOL stereo;
-
-@property (nonatomic) CGFloat fmPreset1;
-@property (nonatomic) CGFloat fmPreset2;
-@property (nonatomic) CGFloat amPreset1;
-@property (nonatomic) CGFloat amPreset2;
-@property (nonatomic) CGFloat amPreset3;
-
-- (void)toggleStereo;
+- (void)increaseFrequencies;
+- (void)decreaseFrequencies;
 
 @end

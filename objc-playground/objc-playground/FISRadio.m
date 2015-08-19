@@ -10,24 +10,39 @@
 
 @interface FISRadio ()
 
-@property (nonatomic) BOOL power;
+@property (nonatomic, readwrite) CGFloat amFrequency;
+@property (nonatomic, readwrite) CGFloat fmFrequency;
 
-@property (nonatomic, readwrite) CGFloat amTuning;
-@property (nonatomic, readwrite) CGFloat fmTuning;
-
-@property (nonatomic) BOOL stereo;
+@property (nonatomic, readwrite) BOOL stereo;
 
 @end
 
 @implementation FISRadio
 
-- (void)toggleStereo {
-    if (self.stereo) {
-        self.stereo = NO;
-        NSLog(@"Mono mode selected.");
-    } else if (!self.stereo) {
-        self.stereo = YES;
-        NSLog(@"Stereo mode selected.");
+- (void)defaultFrequencies {
+    self.amFrequency = 150.0;
+    self.fmFrequency = 91.0;
+}
+
+- (void)increaseFrequencies {
+    if (!self.amFrequency) {
+        [self defaultFrequencies];
+    }
+    
+    if (self.amFrequency + 0.5 <= 160.0) {
+        self.amFrequency += 0.5;
+        self.fmFrequency += 0.1;
+    }
+}
+
+- (void)decreaseFrequencies {
+    if (!self.amFrequency) {
+        [self defaultFrequencies];
+    }
+    
+    if (self.amFrequency - 0.5 >= 53.0) {
+        self.amFrequency -= 0.5;
+        self.fmFrequency -= 0.1;
     }
 }
 
