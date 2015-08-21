@@ -19,15 +19,28 @@
 
 @implementation FISRadio
 
+- (instancetype)init {
+    return [self initWithAMFrequency:150.0 fmFrequency:91.0];
+}
+
+- (instancetype)initWithAMFrequency:(CGFloat)amFrequency fmFrequency:(CGFloat)fmFrequency {
+    self = [super init];
+    if (self) {
+        _amFrequency = amFrequency;
+        _fmFrequency = fmFrequency;
+    }
+    return self;
+}
+
 - (void)defaultFrequencies {
     self.amFrequency = 150.0;
     self.fmFrequency = 91.0;
 }
 
 - (void)increaseFrequencies {
-    if (!self.amFrequency) {
-        [self defaultFrequencies];
-    }
+//    if (!self.amFrequency) {
+//        [self defaultFrequencies];
+//    }
     
     if (self.amFrequency + 0.5 <= 160.0) {
         self.amFrequency += 0.5;
@@ -36,9 +49,9 @@
 }
 
 - (void)decreaseFrequencies {
-    if (!self.amFrequency) {
-        [self defaultFrequencies];
-    }
+//    if (!self.amFrequency) {
+//        [self defaultFrequencies];
+//    }
     
     if (self.amFrequency - 0.5 >= 53.0) {
         self.amFrequency -= 0.5;

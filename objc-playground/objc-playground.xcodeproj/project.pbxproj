@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1BB2F51B86558E007D7D98 /* FISWarship.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1BB2F41B86558E007D7D98 /* FISWarship.m */; };
 		4D8972BB1B84CA0E00069204 /* FISRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8972BA1B84CA0E00069204 /* FISRadio.m */; };
 		4DC659201B74FEE70040D00B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6591F1B74FEE70040D00B /* main.m */; };
 		4DC659231B74FEE70040D00B /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC659221B74FEE70040D00B /* FISAppDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1BB2F31B86558E007D7D98 /* FISWarship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISWarship.h; sourceTree = "<group>"; };
+		4D1BB2F41B86558E007D7D98 /* FISWarship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISWarship.m; sourceTree = "<group>"; };
 		4D8972B91B84CA0E00069204 /* FISRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISRadio.h; sourceTree = "<group>"; };
 		4D8972BA1B84CA0E00069204 /* FISRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISRadio.m; sourceTree = "<group>"; };
 		4DC6591A1B74FEE70040D00B /* objc-playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +88,8 @@
 				4DC659221B74FEE70040D00B /* FISAppDelegate.m */,
 				4D8972B91B84CA0E00069204 /* FISRadio.h */,
 				4D8972BA1B84CA0E00069204 /* FISRadio.m */,
+				4D1BB2F31B86558E007D7D98 /* FISWarship.h */,
+				4D1BB2F41B86558E007D7D98 /* FISWarship.m */,
 				4DC659271B74FEE70040D00B /* Main.storyboard */,
 				4DC6592A1B74FEE70040D00B /* Images.xcassets */,
 				4DC6592C1B74FEE70040D00B /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				4DC659231B74FEE70040D00B /* FISAppDelegate.m in Sources */,
 				4DC659201B74FEE70040D00B /* main.m in Sources */,
 				4D8972BB1B84CA0E00069204 /* FISRadio.m in Sources */,
+				4D1BB2F51B86558E007D7D98 /* FISWarship.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

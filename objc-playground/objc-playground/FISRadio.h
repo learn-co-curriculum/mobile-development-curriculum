@@ -14,6 +14,9 @@
 @property (nonatomic, readonly) CGFloat amFrequency;
 @property (nonatomic, readonly) CGFloat fmFrequency;
 
+- (instancetype)init;
+- (instancetype)initWithAMFrequency:(CGFloat)amFrequency fmFrequency:(CGFloat)fmFrequency;
+
 - (void)increaseFrequencies;
 - (void)decreaseFrequencies;
 
