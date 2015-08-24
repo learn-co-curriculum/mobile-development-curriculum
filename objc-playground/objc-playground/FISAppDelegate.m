@@ -36,7 +36,7 @@
     NSSortDescriptor *sortByNameAsc = [[NSSortDescriptor alloc] initWithKey:@"name"
                                                                   ascending:YES];
     
-    
+//    NSSortDescriptor *sortByNameAsc = [[NSSortDescriptor alloc] init];
 //    sortByNameAsc.key = @"name";
 //    sortByNameAsc.ascending = YES;
     
@@ -46,6 +46,19 @@
     [instructors addObjectsFromArray:@[@"Joe", @"Tim", @"Tom", @"Jim", @"Mark"]];
 
     NSLog(@"%@", instructors);
+    
+    FISWarship *ship = [[FISWarship alloc] init];
+    FISWarship *boat = [[FISWarship alloc] init];
+    
+    NSLog(@"%@ - Max: %lu", ship.shipName, ship.maximumSpeedInKnots);
+    NSLog(@"%@ - Max: %lu", boat.shipName, boat.maximumSpeedInKnots);
+
+    FISWarship *ussNewJersey = [[FISWarship alloc] initWithShipName:@"USS New Jersey"];
+    FISWarship *ussWisconsin = [[FISWarship alloc] initWithShipName:@"USS Wisconsin"
+                                                maximumSpeedInKnots:33];
+    
+    NSLog(@"%@ - Speed: %lu - Max: %lu", ussNewJersey.shipName, ussNewJersey.currentSpeedInKnots, ussNewJersey.maximumSpeedInKnots);
+    NSLog(@"%@ - Speed: %lu - Max: %lu", ussWisconsin.shipName, ussWisconsin.currentSpeedInKnots, ussWisconsin.maximumSpeedInKnots);
     
     return YES;
 }

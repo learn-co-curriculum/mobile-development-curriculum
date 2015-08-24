@@ -5,18 +5,30 @@
 @implementation FISWarship
 
 - (instancetype)init {
-    return [self initWithShipName:@""
+    self = [self initWithShipName:@"Mary Celeste"
               currentSpeedInKnots:0
-              maximumSpeedInKnots:0];
+              maximumSpeedInKnots:20];
+    return self;
 }
 
 - (instancetype)initWithShipName:(NSString *)shipName {
-    return [self initWithShipName:shipName
+    
+    self = [self initWithShipName:shipName
+              maximumSpeedInKnots:20];
+    return self;
+}
+
+- (instancetype)initWithShipName:(NSString *)shipName
+             maximumSpeedInKnots:(NSUInteger)maximumSpeedInKnots {
+    
+    self = [self initWithShipName:shipName
               currentSpeedInKnots:0
-              maximumSpeedInKnots:0];
+              maximumSpeedInKnots:maximumSpeedInKnots];
+    return self;
 }
 
 - (instancetype)initWithShipName:(NSString *)shipName currentSpeedInKnots:(NSUInteger)currentSpeedInKnots maximumSpeedInKnots:(NSUInteger)maximumSpeedInKnots {
+    
     self = [super init];
     if (self) {
         _shipName = shipName;

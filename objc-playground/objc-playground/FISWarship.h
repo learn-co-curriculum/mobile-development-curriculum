@@ -11,6 +11,8 @@
 - (instancetype)init;
 - (instancetype)initWithShipName:(NSString *)shipName;
 - (instancetype)initWithShipName:(NSString *)shipName
+             maximumSpeedInKnots:(NSUInteger)maximumSpeedInKnots;
+- (instancetype)initWithShipName:(NSString *)shipName
              currentSpeedInKnots:(NSUInteger)currentSpeedInKnots
              maximumSpeedInKnots:(NSUInteger)maximumSpeedInKnots;
 
