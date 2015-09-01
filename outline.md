@@ -9,7 +9,7 @@ rr = proposed reading on objective-c
 ll = proposed lab
 CA/ca = code-along
 gg = proposed reference guide
-xx = proposed xcode reading
+xc = proposed xcode reading
 SP = existing Spec lab
 // = non-language programming skill (i.e. commenting, referencing)
 
@@ -48,10 +48,10 @@ SP = existing Spec lab
     ll CA: (creating methods) palindrome detector ?
     09 Using Tests        (2 issues: needs short lab, too advanced)
     10 WWDC Badges Methods
-    gg basic structure reference guide
+    gg basic structure reference guide (+ fundamentals RG)
     11 Cap: Deli Counter  (2 issues: needs more explicit instructions, needs more previous labs)
   03 Scope & Mutables
-    rr ? Xcode: Common error messages ?
+    xc ? Xcode: Common error messages ?
     rr NSMutableArray
     ll fibo finder https://github.com/learn-co-curriculum/ios-fibo-finder
     01 NSMutableString
@@ -60,7 +60,7 @@ SP = existing Spec lab
     02 Practice With Scope
     03 Xcode: Debugging
     04 Cartoon Collections (1 issues: debugging reminder)
-    gg scope & mutables reference guide
+    gg scope & mutables reference guide (+ basic structure RG + fundamentals RG)
   04 Collections
     01 More Loop Types
     02 CA: WhileyCoyote
@@ -75,7 +75,7 @@ SP = existing Spec lab
     09 NSSortDescriptor        (1 issue: needs quiz or short lab)
     ll sorting practice
     10 Collections Review      (1 issue: fix a test)
-    gg collections reference guide
+    gg collections reference guide (+ scope & mutables RG + basic structure RG + fundamentals RG)
     11 Cap: Location Trivia Dictionaries
 
 03 Objects in Objetive-C
@@ -87,19 +87,19 @@ SP = existing Spec lab
     05 SP Holiday Properties 
     06 RR Creating A Custom Class
     07 SP iOShoppingCart        (1 issue: nssortdescriptor requires @selector)
-    xx ? xcode lesson ? pbxproj ? config files ?
+    xc ? xcode lesson ? pbxproj ? config files ?
     08 RR Property Visibility
     09 SP FISSentence
     10 RR Writing Initializers
     11 SP Object Oriented People
-    gg object basics reference guide
+    gg object basics reference guide (+ previous RGs)
     12 Cap: Location Trivia - Objects
   02 Selectors
     rr @selector
     ll selector practice
-    rr compare?
-    ll ca: sort descriptor with caseinsensitivecompare
-    xx ? xcode: interpreting the stack track ?
+    rr comparisons
+    ll ca: nssortdescriptor with caseinsensitivecompare ?
+    xc ? xcode: interpreting the stack trace ?
     01 Extensions/Categories
     02 Category Math? ew
     rr NSDate
@@ -108,7 +108,7 @@ SP = existing Spec lab
     ll NSDate+Formats
     // commenting methods with @param etc ?
     ...
-    gg extensions reference guide
+    gg extensions reference guide (+ previous RGs)
   03 Inheritance
     01 Intro to Inheritance
     rr Creating a Subclass
@@ -118,12 +118,12 @@ SP = existing Spec lab
     rr Casting
     04 PetCast
     // how to read the apple docs
-    xcode: quick links to docs
+    xc xcode: quick links to docs
     // how to read Stack Overflow
     // how to reference tech blogs
     ...
     ll inheritance review
-    gg inheritance reference guide
+    gg inheritance reference guide (+ previous RGs)
     05 Cap: Objc-Black-Jack
 
 
