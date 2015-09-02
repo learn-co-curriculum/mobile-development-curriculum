@@ -16,8 +16,7 @@ cli resources : delete from track
     04 CLI Basics
 
 
-? create moving "pardon our stardust" reading ?
--- create a "beta" tag for readings & labs... engineering issue
+-- engineering: create a "beta" tag for readings & labs
 
 01 (digits) = existing lesson
 rr = proposed reading on objective-c
@@ -32,21 +31,21 @@ SP = existing Spec lab
   01 Basic Objective-C --> Objective-C Fundamentals
     01 Xcode: Just Enough  
     02 CA: Your First NSLog
-    rr NSLog & String Literal
+    rr03 NSLog & String Literal
         some students are confusing NSLog syntax for string interpolation methods, need to discuss () vs [] vs {}
         nice-to-have: quiz
-    xc ca: code-along about warnings and errors
-    ll CA: Interpolation Practice
+    xc04 ca: code-along about warnings and errors
+    ll05 CA: Interpolation Practice
         like: https://github.com/learn-co-curriculum/objc-basics
-    03 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
+    06 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
     not now    ll CA: (naming practice) By Any Other Name
-    rr NSInteger & Operands
+    rr07 NSInteger & Operands
         should introduce integers and math before discussing nsnumber
-    ll CA: Simple Math
-    04 Calling Methods
-    05 NSString
-    06 CA: Parrot -- remove NSMutableString until later
-    gg fundamentals reference guide
+    ll08 CA: Simple Math
+    09 Calling Methods
+    10 NSString
+    11 CA: Parrot -- remove NSMutableString until later
+    gg12 fundamentals reference guide
     nice-to-have ll cap: objc-playground ?
 
   02 Basic Structures
@@ -69,6 +68,7 @@ SP = existing Spec lab
     10 WWDC Badges Methods
     gg basic structure reference guide (+ fundamentals RG)
     11 Cap: Deli Counter  (2 issues: needs more explicit instructions, needs more previous labs)
+
   03 Scope & Mutables
     xc ? Xcode: Common error messages ?
     rr NSMutableArray
@@ -78,6 +78,7 @@ SP = existing Spec lab
     03 Xcode: Debugging
     04 Cartoon Collections (1 issues: debugging reminder)
     gg scope & mutables reference guide (+ basic structure RG + fundamentals RG)
+
   04 Collections
     01 More Loop Types
     02 CA: WhileyCoyote
@@ -95,6 +96,7 @@ SP = existing Spec lab
     gg collections reference guide (+ scope & mutables RG + basic structure RG + fundamentals RG)
     11 Cap: Location Trivia Dictionaries
 
+
 03 Objects in Objetive-C
   01 Object Basics
     01 RR Intro to Object Orientation
@@ -111,6 +113,7 @@ SP = existing Spec lab
     11 SP Object Oriented People
     gg object basics reference guide (+ previous RGs)
     12 Cap: Location Trivia - Objects
+
   02 Selectors
     rr @selector
     ll selector practice
@@ -126,6 +129,7 @@ SP = existing Spec lab
     // commenting methods with @param etc ?
     ...
     gg extensions reference guide (+ previous RGs)
+    
   03 Inheritance
     01 Intro to Inheritance
     rr Creating a Subclass
