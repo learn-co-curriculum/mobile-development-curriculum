@@ -10,6 +10,64 @@
     // Override point for customization after application launch.
     
     
+    // For Code-Along: Interpolate!
+    NSLog(@"Interpolate!");
+    NSLog(@"%@", @"Interpolate!");
+    NSLog(@"%@ %@", @"Interpolate!", @"Interpolate!");
+    NSLog(@"%@%@%@%@%@", @"In", @"ter", @"po", @"late", @"!");
+    NSLog(@"%@-%@-%@-%@%@", @"In", @"ter", @"po", @"late", @"!");
+    
+    NSLog(@"Dalek");
+    NSLog(@"%@", @"Dalek");
+    NSLog(@"%@%@%@%@%@", @"D", @"a", @"l", @"e", @"k");
+    
+    NSLog(@"You are not The Doctor!");
+    NSLog(@"%@", @"You are not The Doctor!");
+    NSLog(@"%@%@%@%@%@", @"You", @"are", @"not", @"The", @"Doctor");
+    NSLog(@"%@ %@ %@ %@ %@!", @"You", @"are", @"not", @"The", @"Doctor");
+    NSLog(@"You are %@ %@!", @"not", @"The Doctor");
+    
+    
+    
+    
+    
+    
+    NSInteger i = 0;
+    NSUInteger u = 0;
+    CGFloat f = 0.0;
+    BOOL isFalse = NO;
+    
+    NSInteger j = 1;
+    NSUInteger v = 1;
+    CGFloat g = 1.0;
+    BOOL isTrue = YES;
+    
+    NSLog(@"%li", i);
+    NSLog(@"%li", j);
+    NSLog(@"%lu", u);
+    NSLog(@"%lu", v);
+    NSLog(@"%f", f);
+    NSLog(@"%f", g);
+    NSLog(@"%d", isFalse);
+    NSLog(@"%d", isTrue);
+    
+    NSLog(@"i: %li", i);
+    NSLog(@"j: %li", j);
+    NSLog(@"u: %lu", u);
+    NSLog(@"v: %lu", v);
+    NSLog(@"f: %f", f);
+    NSLog(@"g: %f", g);
+    NSLog(@"isFalse: %d", isFalse);
+    NSLog(@"isTrue: %d", isTrue);
+    
+    NSInteger a = 1 + 1;
+    NSInteger b = 2 + 2;
+    NSInteger c = a + b;
+    NSInteger d = 30 + a + c - 9;
+
+    NSLog(@"a: %li, b: %li, c: %li, d: %li", a, b, c, d);
+    
+    
 //    FISRadio *radio = [[FISRadio alloc] init];
 //    NSLog(@"AM: %.1f, FM: %.1f", radio.amFrequency, radio.fmFrequency);
 //    [radio increaseFrequencies];
@@ -41,9 +99,9 @@
 ////    sortByNameAsc.key = @"name";
 ////    sortByNameAsc.ascending = YES;
 //    
-    NSArray *instructors = [[NSArray alloc] initWithObjects:(const id[5]){ @"Joe", @"Tim", @"Tom", @"Jim", @"Mark" } count:5];
-    
-    NSLog(@"%@", instructors);
+//    NSArray *instructors = [[NSArray alloc] initWithObjects:(const id[5]){ @"Joe", @"Tim", @"Tom", @"Jim", @"Mark" } count:5];
+//    
+//    NSLog(@"%@", instructors);
 //
 //    NSMutableArray *instructors = [[NSMutableArray alloc] init];
 //    [instructors addObjectsFromArray:@[@"Joe", @"Tim", @"Tom", @"Jim", @"Mark"]];

@@ -31,15 +31,15 @@ SP = existing Spec lab
   01 Basic Objective-C --> Objective-C Fundamentals
     01 Xcode: Just Enough  
     02 CA: Your First NSLog
-    rr03 NSLog & String Literal
+    rr03 NSLog & String Literal & Comments ?
         some students are confusing NSLog syntax for string interpolation methods, need to discuss () vs [] vs {}
         nice-to-have: quiz
-    xc04 ca: code-along about warnings and errors
-    ll05 CA: Interpolation Practice
+    ll04 CA: Interpolate
         like: https://github.com/learn-co-curriculum/objc-basics
-    06 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
+    05 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
+    xc06 ca: code-along about warnings and errors
     not now    ll CA: (naming practice) By Any Other Name
-    rr07 NSInteger & Operands
+    rr07 Primitives & Operands
         should introduce integers and math before discussing nsnumber
     ll08 CA: Simple Math
     09 Calling Methods
@@ -129,7 +129,7 @@ SP = existing Spec lab
     // commenting methods with @param etc ?
     ...
     gg extensions reference guide (+ previous RGs)
-    
+
   03 Inheritance
     01 Intro to Inheritance
     rr Creating a Subclass
