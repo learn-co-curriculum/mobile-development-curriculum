@@ -2,7 +2,22 @@ https://github.com/learn-co-curriculum/hackers-and-painters
 https://github.com/learn-co-curriculum/how-i-held-my-breath-for-17-minutes
 https://github.com/learn-co-curriculum/how-language-changes-the-brain
 
+https://github.com/learn-co-curriculum/ios-collections-and-strings-problems
+
+Environment setup : separate contents out into own lessons (deprecated feature)
+cli resources : delete from track
+
+01 Getting Started
+  // copy for web-fundamentals
+  01 Intro Command Line and BASh
+    01 Intro to the Shell
+    02 First Terminal
+    03 BASH Terminal
+    04 CLI Basics
+
+
 ? create moving "pardon our stardust" reading ?
+-- create a "beta" tag for readings & labs... engineering issue
 
 01 (digits) = existing lesson
 rr = proposed reading on objective-c
@@ -14,24 +29,26 @@ SP = existing Spec lab
 // = non-language programming skill (i.e. commenting, referencing)
 
 02 Objective-C Basics
-  01 Objective-C Fundamentals
+  01 Basic Objective-C --> Objective-C Fundamentals
     01 Xcode: Just Enough  
-        add discussion of warnings, errors, and test failures?
     02 CA: Your First NSLog
     rr NSLog & String Literal
         some students are confusing NSLog syntax for string interpolation methods, need to discuss () vs [] vs {}
+        nice-to-have: quiz
+    xc ca: code-along about warnings and errors
     ll CA: Interpolation Practice
         like: https://github.com/learn-co-curriculum/objc-basics
     03 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
-    ll CA: (naming practice) By Any Other Name
-    rr NSInteger
+    not now    ll CA: (naming practice) By Any Other Name
+    rr NSInteger & Operands
         should introduce integers and math before discussing nsnumber
     ll CA: Simple Math
     04 Calling Methods
     05 NSString
     06 CA: Parrot -- remove NSMutableString until later
     gg fundamentals reference guide
-    ll cap: objc-playground ?
+    nice-to-have ll cap: objc-playground ?
+
   02 Basic Structures
     01 Xcode: An Overview (1 issue: reordered in curriculum since rewrite)
     rr BOOL with quiz ?
@@ -46,6 +63,8 @@ SP = existing Spec lab
     ll CA: (nsnumber practice)
     08 Creating Methods   (2 issues: rewrite example to use FISAppDelegate class, needs short lab)
     ll CA: (creating methods) palindrome detector ?
+    00 NSMutableString
+    not now: ll ca NSMutableString
     09 Using Tests        (2 issues: needs short lab, too advanced)
     10 WWDC Badges Methods
     gg basic structure reference guide (+ fundamentals RG)
@@ -54,8 +73,6 @@ SP = existing Spec lab
     xc ? Xcode: Common error messages ?
     rr NSMutableArray
     ll fibo finder https://github.com/learn-co-curriculum/ios-fibo-finder
-    01 NSMutableString
-    ll string practice https://github.com/learn-co-curriculum/ios-collections-and-strings-problems
     01 Scope
     02 Practice With Scope
     03 Xcode: Debugging
