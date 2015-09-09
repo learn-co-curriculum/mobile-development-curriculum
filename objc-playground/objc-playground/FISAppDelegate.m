@@ -135,6 +135,17 @@
     NSLog(@"greaterThan: %d", greaterThan);
     NSLog(@"greaterThanOrEqualTo: %d", greaterThanOrEqualTo);
     
+    
+    
+    
+    NSInteger manual = 6 + 7 * 8 - 2;
+    NSLog(@"manual: %li", manual);
+    
+    NSInteger override = (6 + 7) * 8 - 2;
+    NSLog(@"override: %li", override);
+    
+    
+    
 //    FISRadio *radio = [[FISRadio alloc] init];
 //    NSLog(@"AM: %.1f, FM: %.1f", radio.amFrequency, radio.fmFrequency);
 //    [radio increaseFrequencies];

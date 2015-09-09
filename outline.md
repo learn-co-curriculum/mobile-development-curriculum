@@ -31,10 +31,10 @@ SP = existing Spec lab
   01 Basic Objective-C --> Objective-C Fundamentals
     01 Xcode: Just Enough  
     02 CA: Your First NSLog
-    rr03 NSLog & String Literal & Comments ?
+    03 NSLog & String Literal & Comments ?
         some students are confusing NSLog syntax for string interpolation methods, need to discuss () vs [] vs {}
         nice-to-have: quiz
-    ll04 CA: Interpolate
+    04 CA: Interpolate
         like: https://github.com/learn-co-curriculum/objc-basics
     05 Variables  // discuss commenting too? /* */  (2 issues: discuss naming, add lab)
     xc06 ca: code-along about warnings and errors
