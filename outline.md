@@ -48,8 +48,8 @@ SP = existing Spec lab
     scrape the quiz from ruby --rr BOOL with quiz ?
     02 Conditionals       (1 issues: add boolean quiz)
     03 CA: Speaking Grandma
-    04 The for Loop       (2 issues: needs lab, introduce problem)
-    ll CA: (looping) FizzBuzz ?
+    04 The for Loop       (1 issue: introduce problem)
+    05 CA: FizzBuzz
     05 NSArray & NSMutableArray (1 issue: needs lab)
     06 WWDC Badges
     08 Creating Methods   (2 issues: rewrite example to use FISAppDelegate class, needs short lab)
@@ -57,6 +57,7 @@ SP = existing Spec lab
     00 NSMutableString
     not now: ll ca NSMutableString
     09 Using Tests        (2 issues: needs short lab, too advanced)
+    ll CA: (using tests) palindrome tester ?
     10 WWDC Badges Methods
     gg basic structure reference guide (+ fundamentals RG)
     11 Cap: Deli Counter  (2 issues: needs more explicit instructions, needs more previous labs)
