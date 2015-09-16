@@ -29,7 +29,7 @@ SP = existing Spec lab
 
 02 Objective-C Basics
   01 Basic Objective-C --> Objective-C Fundamentals
-    01 Xcode: Just Enough  
+    01 Xcode: Just Enough  -
     02 CA: Your First NSLog
     03 NSLog & String Literal
     04 CA: Interpolate
