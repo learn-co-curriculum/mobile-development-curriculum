@@ -33,7 +33,7 @@ SP = existing Spec lab
     02 CA: Your First NSLog
     03 NSLog & String Literal
     04 CA: Interpolate
-    05 Variable Basics         (1 issues: add lab)
+    05 Variable Basics
     06 Xcode: Warnings and Errors
     07 Primitives & Operators
     08 CA: Simple Math
@@ -41,42 +41,40 @@ SP = existing Spec lab
     10 NSString
     11 CA: Parrot
     12 RG: objc-fundamentals
-    nice-to-have ll cap: objc-playground ?
 
   02 Basic Structures
     01 Xcode: An Overview (1 issue: reordered in curriculum since rewrite)
-    scrape the quiz from ruby --rr BOOL with quiz ?
-    02 Conditionals       (1 issues: add boolean quiz)
-    03 CA: Speaking Grandma
-    04 The for Loop       (1 issue: introduce problem)
-    05 CA: FizzBuzz
-    05 NSArray & NSMutableArray (1 issue: needs lab)
-    06 WWDC Badges
-    08 Creating Methods   (2 issues: rewrite example to use FISAppDelegate class, needs short lab)
-    ll CA: (creating methods) palindrome detector ?
-    00 NSMutableString
-    not now: ll ca NSMutableString
-    09 Using Tests        (2 issues: needs short lab, too advanced)
-    ll CA: (using tests) palindrome tester ?
-    10 WWDC Badges Methods
-    gg basic structure reference guide (+ fundamentals RG)
-    11 Cap: Deli Counter  (2 issues: needs more explicit instructions, needs more previous labs)
+    02 Boolean Quiz
+    03 Conditionals
+    04 CA: Speaking Grandma
+    05 The for Loop       (1 issue: introduce problem)
+    06 CA: FizzBuzz
+    07 NSArray & NSMutableArray (1 issue: needs lab)
+    08 WWDC Badges
+    09 Creating Methods   (1 issue: rewrite example to use FISAppDelegate class)
+    10 CA: Palindrome Detector
+    12 Using Tests        (1 issue: too advanced)
+    13 Palindrome Tester
+    11 NSMutableString
+     not now: ll ca NSMutableString
+    14 WWDC Badges Methods
+    gg basic structure reference guide
+    15 Deli Counter
 
-  03 Scope
+  03 Scope & Debugging
     xc Xcode: Apple Docs-Foundation Methods
     01 Scope
     02 Practice With Scope
-    00 NSNumber
-    ll fibo finder https://github.com/learn-co-curriculum/ios-fibo-finder
-    03 Xcode: Debugging
-    04 Cartoon Collections (1 issues: debugging reminder)
-    gg scope & mutables reference guide (+ basic structure RG + fundamentals RG)
+    03 NSNumber
+    04 Fibonacci Finder
+    05 Xcode: Debugging
+    06 Cartoon Collections (1 issues: debugging reminder)
 
   04 Collections
     01 More Loop Types
     02 CA: WhileyCoyote
     03 NSDictionary
-    ll reading dictionary : https://github.com/learn-co-curriculum/solving-trivia
+    ll reading a dictionary : https://github.com/learn-co-curriculum/solving-trivia
     04 Dictionary Ice Cream
     05 Nested Data Structures  (1 issue: needs use cases simple lab)
     ll ca: hashketball?
@@ -86,8 +84,7 @@ SP = existing Spec lab
     08 NSPredicate             (1 issue: long/needs quiz or lab)
     ll nspredicate practice: ? https://github.com/learn-co-curriculum/ios-collections-vol-2/
     10 Collections Review
-    gg collections reference guide (+ scope & mutables RG + basic structure RG + fundamentals RG)
-    11 Cap: Location Trivia Dictionaries
+    11 Location Trivia - Dictionariesxcocd 
 
 
 03 Objects in Objetive-C
@@ -104,7 +101,7 @@ SP = existing Spec lab
     09 SP FISSentence
     10 RR Writing Initializers
     11 SP Object Oriented People
-    gg object basics reference guide (+ previous RGs)
+    xc xcode: reference properties≠
     12 Cap: Location Trivia - Objects
 
   02 Selectors
@@ -141,7 +138,25 @@ SP = existing Spec lab
     05 Cap: Objc-Black-Jack
 
 
-
+04 Basic Views
+  01 Actions And Outlets
+    01 Basics (OOP Cards Simple Views)
+    02 Passing Data Between VCs (This Button is Epoch)
+    03 Getting More Comfortable (Objc Blackjack Views)
+    04 More Practice (Jukebox Views)
+    05 ADV: Understanding Frames (OOP Cards Views)
+  02 Segues & Nav Controllers
+    01 Xcode: Simulated Metric Size
+    rr multiple VCs and Modal Segues  ?Wed?
+    ll modal based lab                ? Wed?
+    rr Nav Controllers & Show Segues (terms: show/push)
+         drill in modal vs push conceptually. Show segue is adaptive now: makes a best guess, but if in a Nav stack you can force a modal by selecting it
+    01 Intro (Objc Navigation Controllers)
+        clean up to remove passing data forward: JUST Nav Controller & Segues (both kinds to show distinction)
+    rr Passing Data Forward
+    ll simple lab, passing data forward
+    03 ADV: More Practice ... (Tasks Today)
+      why are there TWO segues to the same Detail VC? Also, for an advanced lab it might nice to have more than two VCs, to show how a Nav Controller handles a stack of at least three VCs. Not sure what example case would be good before Table Views, though.
 
     
 

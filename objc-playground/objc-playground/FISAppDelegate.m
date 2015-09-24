@@ -9,84 +9,136 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // single word, all lowercae
-    NSString *palindrome = @"palindrome";
-    BOOL palindromeIsPalindrome = [self stringIsPalindrome:palindrome];
-    NSLog(@"%d : %@", palindromeIsPalindrome, palindrome);
-    
-    NSString *racecar = @"racecar";
-    BOOL racecarIsPalindrome = [self stringIsPalindrome:racecar];
-    NSLog(@"%d : %@", racecarIsPalindrome, racecar);
 
-    // single word, with uppercase
-    NSString *bob = @"Bob";
-    BOOL bobIsPalindrome = [self stringIsPalindrome:bob];
-    NSLog(@"%d : %@", bobIsPalindrome, bob);
+    NSDictionary *hashketball = @{ @"away" : @{ @"name" : @"Charlotte Hornets",
+                                                @"colors" : @[ @"Turquoise", @"Purple"],
+                                                @"players" : @[ @{ @"name" : @"Jeff Adrien",
+                                                                   @"number" : @4,
+                                                                   @"shoe" : @18,
+                                                                   @"points" : @10,
+                                                                   @"rebounds" : @1,
+                                                                   @"assists" : @1,
+                                                                   @"steals" : @2,
+                                                                   @"blocks" : @7,
+                                                                   @"slam dunks" : @2
+                                                                   },
+                                                                @{ @"name" : @"Bismak Biyombo",
+                                                                   @"number" : @0,
+                                                                   @"shoe" : @16,
+                                                                   @"points" : @12,
+                                                                   @"rebounds" : @4,
+                                                                   @"assists" : @7,
+                                                                   @"steals" : @7,
+                                                                   @"blocks" : @15,
+                                                                   @"slam dunks" : @10
+                                                                   },
+                                                                @{ @"name" : @"DeSagna Diop",
+                                                                   @"number" : @2,
+                                                                   @"shoe" : @14,
+                                                                   @"points" : @24,
+                                                                   @"rebounds" : @12,
+                                                                   @"assists" : @12,
+                                                                   @"steals" : @4,
+                                                                   @"blocks" : @5,
+                                                                   @"slam dunks" : @6
+                                                                   },
+                                                                @{ @"name" : @"Ben Gordon",
+                                                                   @"number" : @8,
+                                                                   @"shoe" : @15,
+                                                                   @"points" : @33,
+                                                                   @"rebounds" : @3,
+                                                                   @"assists" : @2,
+                                                                   @"steals" : @1,
+                                                                   @"blocks" : @1,
+                                                                   @"slam dunks" : @0
+                                                                   },
+                                                                @{ @"name" : @"Brendan Haywood",
+                                                                   @"number" : @33,
+                                                                   @"shoe" : @15,
+                                                                   @"points" : @6,
+                                                                   @"rebounds" : @12,
+                                                                   @"assists" : @12,
+                                                                   @"steals" : @22,
+                                                                   @"blocks" : @5,
+                                                                   @"slam dunks" : @12
+                                                                   }
+                                                                ]
+                                                },
+                                   @"home" : @{ @"name" : @"Brooklyn Nets",
+                                                @"colors" : @[ @"Black", @"White"],
+                                                @"players" : @[
+                                                        @{ @"name" : @"Alan Anderson",
+                                                           @"number" : @0,
+                                                           @"shoe" : @16,
+                                                           @"points" : @22,
+                                                           @"rebounds" : @12,
+                                                           @"assists" : @12,
+                                                           @"steals" : @3,
+                                                           @"blocks" : @1,
+                                                           @"slam dunks" : @1
+                                                           },
+                                                        @{ @"name" : @"Reggie Evans",
+                                                           @"number" : @30,
+                                                           @"shoe" : @14,
+                                                           @"points" : @12,
+                                                           @"rebounds" : @12,
+                                                           @"assists" : @12,
+                                                           @"steals" : @12,
+                                                           @"blocks" : @12,
+                                                           @"slam dunks" : @7
+                                                           },
+                                                        @{ @"name" : @"Brook Lopez",
+                                                           @"number" : @11,
+                                                           @"shoe" : @17,
+                                                           @"points" : @17,
+                                                           @"rebounds" : @19,
+                                                           @"assists" : @10,
+                                                           @"steals" : @3,
+                                                           @"blocks" : @1,
+                                                           @"slam dunks" : @15
+                                                           },
+                                                        @{ @"name" : @"Mason Plumlee",
+                                                           @"number" : @1,
+                                                           @"shoe" : @19,
+                                                           @"points" : @26,
+                                                           @"rebounds" : @12,
+                                                           @"assists" : @6,
+                                                           @"steals" : @3,
+                                                           @"blocks" : @8,
+                                                           @"slam dunks" : @5
+                                                           },
+                                                        @{ @"name" : @"Jason Terry",
+                                                           @"number" : @31,
+                                                           @"shoe" : @15,
+                                                           @"points" : @19,
+                                                           @"rebounds" : @2,
+                                                           @"assists" : @2,
+                                                           @"steals" : @4,
+                                                           @"blocks" : @11,
+                                                           @"slam dunks" : @1
+                                                           }
+                                                        ]
+                                                }
+                                   };
     
-    NSString *aibohphobia = @"Aibohphobia";
-    BOOL aibohphobiaIsPalindrome = [self stringIsPalindrome:aibohphobia];
-    NSLog(@"%d : %@", aibohphobiaIsPalindrome, aibohphobia);
+    NSLog(@"%@", hashketball);
     
-    NSString *kanakanak = @"Kanakanak";
-    BOOL kanakanakIsPalindrome = [self stringIsPalindrome:kanakanak];
-    NSLog(@"%d : %@", kanakanakIsPalindrome, kanakanak);
+    NSPredicate *stealsGreaterThan5Predicate = [NSPredicate predicateWithFormat:@"steals > 5"];
+    NSMutableArray *stealsGreaterThan5 = [[NSMutableArray alloc] init];
     
-    // multiple words, no punctuation
-    NSString *notAPalindrome = @"this is not a palindrome";
-    BOOL notAPalindromeIsPalindrome = [self stringIsPalindrome:notAPalindrome];
-    NSLog(@"%d : %@", notAPalindromeIsPalindrome, notAPalindrome);
+    NSArray *awayPlayers = hashketball[@"away"][@"players"];
+    NSArray *results = [awayPlayers filteredArrayUsingPredicate:stealsGreaterThan5Predicate];
+    [stealsGreaterThan5 addObjectsFromArray:results];
     
-    NSString *neverOdd = @"never odd or even";
-    BOOL neverOddIsPalindrome = [self stringIsPalindrome:neverOdd];
-    NSLog(@"%d : %@", neverOddIsPalindrome, neverOdd);
-
-    NSString *iPreferPi = @"I prefer pi";
-    BOOL iPreferPiIsPalindrome = [self stringIsPalindrome:iPreferPi];
-    NSLog(@"%d : %@", iPreferPiIsPalindrome, iPreferPi);
+    NSArray *homePlayers = hashketball[@"home"][@"players"];
+    results = [homePlayers filteredArrayUsingPredicate:stealsGreaterThan5Predicate];
+    [stealsGreaterThan5 addObjectsFromArray:results];
     
-    // full sentences with punctuation and capitalization
-    NSString *fleeToMe = @"Flee to me, remote elf.";
-    BOOL fleeToMeIsPalindrome = [self stringIsPalindrome:fleeToMe];
-    NSLog(@"%d : %@", fleeToMeIsPalindrome, fleeToMe);
+    NSLog(@"%@", stealsGreaterThan5);
     
-    NSString *norma = @"Norma is as selfless as I am, Ron.";
-    BOOL normaIsPalindrome = [self stringIsPalindrome:norma];
-    NSLog(@"%d : %@", normaIsPalindrome, norma);
     
-    NSString *papayaWar = @"No sir! Away! A papaya war is on.";
-    BOOL papayaWarIsPalindrome = [self stringIsPalindrome:papayaWar];
-    NSLog(@"%d : %@", papayaWarIsPalindrome, papayaWar);
     
     return YES;
-}
-
-- (BOOL)stringIsPalindrome:(NSString *)string {
-    
-    NSArray *punctuations = @[ @" ", @".", @",", @"!", @"?", @":", @";" ];
-    
-    for (NSUInteger i = 0; i < [punctuations count]; i++) {
-        NSString *punctuation = punctuations[i];
-        string = [string stringByReplacingOccurrencesOfString:punctuation withString:@""];
-    }
-    
-    string = [string lowercaseString];
-    
-    NSString *reverse = [self stringByReversingString:string];
-    
-    if ([string isEqualToString:reverse]) {
-        return YES;
-    }
-    
-    return NO;
-}
-
-- (NSString *)stringByReversingString:(NSString *)string {
-    NSString *result = @"";
-    for (NSUInteger i = [string length]; i > 0; i--) {
-        NSUInteger index = i - 1;
-        result = [result stringByAppendingFormat:@"%c", [string characterAtIndex:index]];
-    }
-    return result;
 }
 
 @end
