@@ -19,7 +19,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
+
+class Present {
+    var description: String = "firetruck"
+}
+
+class ChristmasTree {
+    var presents = [Present?]()
+    
+    func openNextPresent() -> Present {
+        if let present = self.presents.removeLast() {
+            return present
+        }
+    }
+}
