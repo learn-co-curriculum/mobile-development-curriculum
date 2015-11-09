@@ -98,8 +98,10 @@ for speaker in speakers {
 
 
 
-let allStudents = ["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper", "Charles Babbage", "Adele Goldberg", "Edsger Dijkstra", "Joan Clarke", "Clarence Ellis", "Margaret Hamilton", "George Boole", "Tim Berners-Lee", "Jean Bartik"]
+var allStudents: ArraySlice<String> = ["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper", "Charles Babbage", "Adele Goldberg", "Edsger Dijkstra", "Joan Clarke", "Clarence Ellis", "Margaret Hamilton", "George Boole", "Tim Berners-Lee", "Jean Bartik"]
 
+
+allStudents.popFirst()
 
 let iosBatches: [String: [String: Any ]] = [
     "ios-101": [
@@ -314,4 +316,65 @@ womens = womens.sort { $0["seconds"] < $1["seconds"] }
 
 
 print(womens)
+
+
+var jenny: [String: String] = [
+    "first name": "Jenny",
+    "relationship": "Friend",
+    "phone number": "(555) 867-5309",
+    "email address": "jenny@email.com",
+    "physical address": "123 Street Name",
+    "city state": "Anywhere, USA",
+    "zip code": "00409"
+]
+
+jenny["relationship"] = "It's Complicated"     // overwrites an existing value
+
+jenny["favorite shrimp dish"] = "Shrimp Gumbo" // creates a new key-value pair
+
+
+if let jennysPhoneNumber = jenny["phone number"] {
+    print(jennysPhoneNumber)
+}
+
+
+if let jennysFavoriteShrimpDish = jenny["favorite shrimp dish"] {
+    print(jennysFavoriteShrimpDish)
+} else {
+    print("Jenny doesn't like shrimp.")
+}
+
+for (key, value) in jenny {
+    print("Jenny's \(key) is \(value).")
+}
+
+for (name, karma) in karmaByName {
+    print("\(name) has \(karma) karma.")
+}
+
+for (prime, sqrt) in primeSqrts {
+    print("The square root of the prime number \(prime) is approximately \(sqrt)")
+}
+
+
+let jennyKeys = jenny.keys
+
+if jenny.keys.contains("phone number") {
+    print(jenny["phone number"]!)
+}
+
+
+jenny["first name"] = nil
+jenny["relationship"] = nil
+jenny["phone number"] = nil
+jenny["email address"] = nil
+jenny["physical address"] = nil
+jenny["city state"] = nil
+jenny["zip code"] = nil
+jenny["favorite shrimp dish"] = nil
+
+print(jenny)
+
+
+
 
