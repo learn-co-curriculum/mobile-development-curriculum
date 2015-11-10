@@ -52,13 +52,27 @@ print(index)
 
 let speakers = ["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper", "Charles Babbage"]
 
+let roomsBySpeaker: [String: Int] = [
+    "Anita Borg":201,
+    "Alan Kay":202,
+    "Ada Lovelace":203,
+    "Aaron Swartz":215,
+    "Alan Turing":204,
+    "Michael Faraday":205,
+    "Grace Hopper":230,
 
+]
 
-let roomsBySpeaker: [String: Int] = ["Anita Borg":201, "Alan Kay":202, "Ada Lovelace":203, "Aaron Swartz":215, "Alan Turing":204, "Michael Faraday":205, "Grace Hopper":230, "Charles Babbage":260]
+let capacitiesForRooms: [Int: Int] = [
+    201:40,
+    202:50,
+    203:70,
+    215:30,
 
-
-
-let capacitiesForRooms: [Int: Int] = [201:40, 202:50, 203:70, 215:30, 204:30, 205:20, 230:80, 260:60]
+    205:20,
+    230:80,
+    260:60
+]
 
 
 func roomAssignmentsForSpeakers(speakers: [String]) -> [String] {
@@ -75,189 +89,201 @@ func roomAssignmentsForSpeakers(speakers: [String]) -> [String] {
 }
 
 
-func audienceMaxSizeForSpeaker(speaker: String) -> Int? {
-    if let room = roomsBySpeaker[speaker] {
-        if let maxSize = capacitiesForRooms[room] {
-            return maxSize
-        } else {
-            return nil
+func getCapacitiesForSpeakers() -> [String: Int] {
+    var capacitiesForSpeakers = [String: Int]()
+    for (speaker, room) in roomsBySpeaker {
+        if let capacity = capacitiesForRooms[room] {
+            capacitiesForSpeakers[speaker] = capacity
         }
-    } else {
-        return nil
     }
-}
-
-for speaker in speakers {
-    if let maxSize = audienceMaxSizeForSpeaker(speaker) {
-        print("\(speaker) can speak to up to \(maxSize) people.")
-    } else {
-        print("Room information not found.")
-    }
+    return capacitiesForSpeakers
 }
 
 
 
 
-var allStudents: ArraySlice<String> = ["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper", "Charles Babbage", "Adele Goldberg", "Edsger Dijkstra", "Joan Clarke", "Clarence Ellis", "Margaret Hamilton", "George Boole", "Tim Berners-Lee", "Jean Bartik"]
+//func capacityForSpeaker(speaker: String) -> Int? {
+//    if let room = roomsBySpeaker[speaker] {
+//        if let maxSize = capacitiesForRooms[room] {
+//            return maxSize
+//        } else {
+//            return nil
+//        }
+//    } else {
+//        return nil
+//    }
+//}
 
-
-allStudents.popFirst()
-
-let iosBatches: [String: [String: Any ]] = [
-    "ios-101": [
-        "instructors": ["Joe Burgess", "Al Tyus"],
-        "students": ["Anita Borg", "Ada Lovelace", "Michael Faraday"],
-        "semester": "Spring 2014"
-    ],
-    "ios-102": [
-        "instructors": ["Joe Burgess", "Chris Gonzales"],
-        "students" : ["Alan Kay", "Tim Berners-Lee", "Jean Bartik"],
-        "semester": "Summer 2014"
-    ],
-    "ios-103": [
-        "instructors": ["Joe Burgess", "Zach Drossman"],
-        "students": ["Margaret Hamilton", "George Boole", "Grace Hopper"],
-        "semester": "Fall 2014"
-    ],
-    "ios-104": [
-        "instructors": ["Tim Clem", "Jim Camapgno"],
-        "students": ["Aaron Swartz", "Joan Clarke", "Charles Babbage"],
-        "semester": "Spring 2015"
-    ],
-    "ios-105": [
-        "instructors": ["Tim Clem", "Tom O'Malley"],
-        "students": ["Alan Turing", "Edsger Dijkstra", "Clarence Ellis"],
-        "semester": "Summer 2015"
-    ],
-    "ios-106": [
-        "instructors": ["Tim Clem", "Mark Murray"],
-        "students": ["Grace Hopper"],
-        "semester": "Fall 2015"
-    ]
-]
-
-
-let mensMarathon = [
-    "Stephen Kiprotich": [
-        "nation": "Uganda",
-        "time": "2:08:01",
-        "place": 1
-    ],
-    "Abel Kirui": [
-        "nation": "Kenya",
-        "time": "2:08:27",
-        "place": 2
-    ],
-    "Wilson Kipsang Kiprotich": [
-        "nation": "Kenya",
-        "time": "2:09:37",
-        "place": 3
-    ],
-    "Mebrahtom Keflezighi": [
-        "nation": "United States",
-        "time": "2:11:06",
-        "place": 4
-    ],
-    "Marilson Dos Santos": [
-        "nation": "Brazil",
-        "time": "2:11:10",
-        "place": 5
-    ],
-    "Kentaro Nakamoto": [
-        "nation": "Japan",
-        "time": "2:11:16",
-        "place": 6
-    ],
-    "Cuthbert Nyasango": [
-        "nation": "Zimbabwe",
-        "time": "2:12:08",
-        "notes": "PB",
-        "place": 7
-    ],
-    "Paulo Roberto Paula": [
-        "nation": "Brazil",
-        "time": "2:12:17",
-        "place": 8
-    ],
-    "Henryk Szost": [
-        "nation": "Poland",
-        "time": "2:12:28",
-        "place": 9
-    ],
-    "Ruggero Pertile": [
-        "nation": "Italy",
-        "time": "2:12:45",
-        "place": 10
-    ],
-]
-
-let womensMarathon: [String: [String: Any]] = [
-    "Tiki Gelana": [
-        "nation": "Ethiopia",
-        "time": "2:23:07",
-        "notes": "OR"
-    ],
-    "Priscah Jeptoo": [
-        "nation": "Kenya",
-        "time": "2:23:12"
-    ],
-    "Tatyana Petrova Arkhipova": [
-        "nation": "Russia",
-        "time": "2:23:29",
-        "notes": "PB"
-    ],
-    "Mary Keitany": [
-        "nation": "Kenya",
-        "time": "2:23:56"
-    ],
-    "Tetyana Hamera-Shmyrko": [
-        "nation": "Ukraine",
-        "time": "2:24:32",
-        "notes": "NR"
-    ],
-    "Zhu Xiaolin": [
-        "nation": "China",
-        "time": "2:24:48"
-    ],
-    "Jéssica Augusto": [
-        "nation": "Portugal",
-        "time": "2:25:11"
-    ],
-    "Valeria Straneo": [
-        "nation": "Italy",
-        "time": "2:25:27"
-    ],
-    "Albina Mayorova": [
-        "nation": "Russia",
-        "time": "2:25:38"
-    ],
-    "Shalane Flanagan": [
-        "nation": "United States",
-        "time": "2:25:51"
-    ]
-]
-
-func secondsForTime(time: String) -> Double {
-
-    let secondsFormatter = NSDateFormatter()
-    secondsFormatter.dateFormat = "h:mm:ss"
+func audienceSizesForSpeakers(speakers: [String]) -> [String] {
+    var audienceSizes = [String]()
     
-    let tare = secondsFormatter.dateFromString("0:00:00")!
-    let timeDate = secondsFormatter.dateFromString(time)!
-    let seconds = timeDate.timeIntervalSinceDate(tare)
+    let capacities = getCapacitiesForSpeakers()
     
-    return seconds
-}
-
-for (runner, var info) in womensMarathon {
-    if let time = info["time"] as? String {
-        let seconds = secondsForTime(time)
-        info["seconds"] = seconds
-        print("\(runner): \(seconds)")
+    for speaker in speakers {
+        if let maxSize = capacities[speaker] {
+            audienceSizes.append("\(speaker) can speak to up to \(maxSize) people.")
+        } else {
+            audienceSizes.append("Room information not found for \(speaker).")
+        }
     }
+    return audienceSizes
 }
 
-var womens: Array<Dictionary<String, String>> = [
+print(audienceSizesForSpeakers(speakers))
+
+//var allStudents: ArraySlice<String> = ["Anita Borg", "Alan Kay", "Ada Lovelace", "Aaron Swartz", "Alan Turing", "Michael Faraday", "Grace Hopper", "Charles Babbage", "Adele Goldberg", "Edsger Dijkstra", "Joan Clarke", "Clarence Ellis", "Margaret Hamilton", "George Boole", "Tim Berners-Lee", "Jean Bartik"]
+//
+//
+//allStudents.popFirst()
+//
+//let iosBatches: [String: [String: Any ]] = [
+//    "ios-101": [
+//        "instructors": ["Joe Burgess", "Al Tyus"],
+//        "students": ["Anita Borg", "Ada Lovelace", "Michael Faraday"],
+//        "semester": "Spring 2014"
+//    ],
+//    "ios-102": [
+//        "instructors": ["Joe Burgess", "Chris Gonzales"],
+//        "students" : ["Alan Kay", "Tim Berners-Lee", "Jean Bartik"],
+//        "semester": "Summer 2014"
+//    ],
+//    "ios-103": [
+//        "instructors": ["Joe Burgess", "Zach Drossman"],
+//        "students": ["Margaret Hamilton", "George Boole", "Grace Hopper"],
+//        "semester": "Fall 2014"
+//    ],
+//    "ios-104": [
+//        "instructors": ["Tim Clem", "Jim Camapgno"],
+//        "students": ["Aaron Swartz", "Joan Clarke", "Charles Babbage"],
+//        "semester": "Spring 2015"
+//    ],
+//    "ios-105": [
+//        "instructors": ["Tim Clem", "Tom O'Malley"],
+//        "students": ["Alan Turing", "Edsger Dijkstra", "Clarence Ellis"],
+//        "semester": "Summer 2015"
+//    ],
+//    "ios-106": [
+//        "instructors": ["Tim Clem", "Mark Murray"],
+//        "students": ["Grace Hopper"],
+//        "semester": "Fall 2015"
+//    ]
+//]
+//
+//
+//let mensMarathon = [
+//    "Stephen Kiprotich": [
+//        "nation": "Uganda",
+//        "time": "2:08:01",
+//        "place": 1
+//    ],
+//    "Abel Kirui": [
+//        "nation": "Kenya",
+//        "time": "2:08:27",
+//        "place": 2
+//    ],
+//    "Wilson Kipsang Kiprotich": [
+//        "nation": "Kenya",
+//        "time": "2:09:37",
+//        "place": 3
+//    ],
+//    "Mebrahtom Keflezighi": [
+//        "nation": "United States",
+//        "time": "2:11:06",
+//        "place": 4
+//    ],
+//    "Marilson Dos Santos": [
+//        "nation": "Brazil",
+//        "time": "2:11:10",
+//        "place": 5
+//    ],
+//    "Kentaro Nakamoto": [
+//        "nation": "Japan",
+//        "time": "2:11:16",
+//        "place": 6
+//    ],
+//    "Cuthbert Nyasango": [
+//        "nation": "Zimbabwe",
+//        "time": "2:12:08",
+//        "notes": "PB",
+//        "place": 7
+//    ],
+//    "Paulo Roberto Paula": [
+//        "nation": "Brazil",
+//        "time": "2:12:17",
+//        "place": 8
+//    ],
+//    "Henryk Szost": [
+//        "nation": "Poland",
+//        "time": "2:12:28",
+//        "place": 9
+//    ],
+//    "Ruggero Pertile": [
+//        "nation": "Italy",
+//        "time": "2:12:45",
+//        "place": 10
+//    ],
+//]
+//
+//let womensMarathon: [String: [String: Any]] = [
+//    "Tiki Gelana": [
+//        "nation": "Ethiopia",
+//        "time": "2:23:07",
+//        "notes": "OR"
+//    ],
+//    "Priscah Jeptoo": [
+//        "nation": "Kenya",
+//        "time": "2:23:12"
+//    ],
+//    "Tatyana Petrova Arkhipova": [
+//        "nation": "Russia",
+//        "time": "2:23:29",
+//        "notes": "PB"
+//    ],
+//    "Mary Keitany": [
+//        "nation": "Kenya",
+//        "time": "2:23:56"
+//    ],
+//    "Tetyana Hamera-Shmyrko": [
+//        "nation": "Ukraine",
+//        "time": "2:24:32",
+//        "notes": "NR"
+//    ],
+//    "Zhu Xiaolin": [
+//        "nation": "China",
+//        "time": "2:24:48"
+//    ],
+//    "Jéssica Augusto": [
+//        "nation": "Portugal",
+//        "time": "2:25:11"
+//    ],
+//    "Valeria Straneo": [
+//        "nation": "Italy",
+//        "time": "2:25:27"
+//    ],
+//    "Albina Mayorova": [
+//        "nation": "Russia",
+//        "time": "2:25:38"
+//    ],
+//    "Shalane Flanagan": [
+//        "nation": "United States",
+//        "time": "2:25:51"
+//    ]
+//]
+//
+
+//
+//for (runner, var info) in womensMarathon {
+//    if let time = info["time"] as? String {
+//        let seconds = secondsForTime(time)
+//        info["seconds"] = seconds
+//        print("\(runner): \(seconds)")
+//    }
+//}
+//
+
+
+
+var womens = [
     [   "name": "Valeria Straneo",
         "nation": "Italy",
         "time": "2:25:27"
@@ -303,6 +329,21 @@ var womens: Array<Dictionary<String, String>> = [
     ]
 ]
 
+womens.dynamicType
+
+func secondsForTime(time: String) -> Double {
+    
+    let secondsFormatter = NSDateFormatter()
+    secondsFormatter.dateFormat = "h:mm:ss"
+    
+    let tare = secondsFormatter.dateFromString("0:00:00")!
+    let timeDate = secondsFormatter.dateFromString(time)!
+    let seconds = timeDate.timeIntervalSinceDate(tare)
+    
+    return seconds
+}
+
+
 for var i = 0; i < womens.count; i++ {
     var runner = womens[i]
     if let time: String = runner["time"] {
@@ -312,68 +353,12 @@ for var i = 0; i < womens.count; i++ {
     womens[i] = runner
 }
 
-womens = womens.sort { $0["seconds"] < $1["seconds"] }
-
+//womens = womens.sort { $0["seconds"] < $1["seconds"] }
+womens = womens.sort { $0["time"] < $1["time"] }
 
 print(womens)
 
 
-var jenny: [String: String] = [
-    "first name": "Jenny",
-    "relationship": "Friend",
-    "phone number": "(555) 867-5309",
-    "email address": "jenny@email.com",
-    "physical address": "123 Street Name",
-    "city state": "Anywhere, USA",
-    "zip code": "00409"
-]
-
-jenny["relationship"] = "It's Complicated"     // overwrites an existing value
-
-jenny["favorite shrimp dish"] = "Shrimp Gumbo" // creates a new key-value pair
-
-
-if let jennysPhoneNumber = jenny["phone number"] {
-    print(jennysPhoneNumber)
-}
-
-
-if let jennysFavoriteShrimpDish = jenny["favorite shrimp dish"] {
-    print(jennysFavoriteShrimpDish)
-} else {
-    print("Jenny doesn't like shrimp.")
-}
-
-for (key, value) in jenny {
-    print("Jenny's \(key) is \(value).")
-}
-
-for (name, karma) in karmaByName {
-    print("\(name) has \(karma) karma.")
-}
-
-for (prime, sqrt) in primeSqrts {
-    print("The square root of the prime number \(prime) is approximately \(sqrt)")
-}
-
-
-let jennyKeys = jenny.keys
-
-if jenny.keys.contains("phone number") {
-    print(jenny["phone number"]!)
-}
-
-
-jenny["first name"] = nil
-jenny["relationship"] = nil
-jenny["phone number"] = nil
-jenny["email address"] = nil
-jenny["physical address"] = nil
-jenny["city state"] = nil
-jenny["zip code"] = nil
-jenny["favorite shrimp dish"] = nil
-
-print(jenny)
 
 
 
