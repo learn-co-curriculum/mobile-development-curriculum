@@ -2,6 +2,39 @@
 
 import UIKit
 
+var instructors: [String] = ["Joe", "Tim", "Jim", "Tom"]
+let primes: [Int] = [1, 2, 3, 5, 7, 11]
+let sqrts: [Double] = [1, 1.414, 1.732, 2.236, 2.646, 3.317]
+
+
+instructors[2] = "Jim Campagno"
+primes[5] = 13   // mutability error
+
+
+instructors.append("Mark")
+instructors.append(42)   // type error
+
+primes.append(13)  // mutability error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let firstName: [String] = ["Joe", "Tim", "Jim", "Tom", "Mark"]
 let lastName: [String] = ["Burgess", "Clem", "Campagno", "O'Malley", "Murray"]
 let karma: [Int] = [53, 13, 9, 9, 8]
@@ -357,6 +390,10 @@ for var i = 0; i < womens.count; i++ {
 womens = womens.sort { $0["time"] < $1["time"] }
 
 print(womens)
+
+
+
+
 
 
 
