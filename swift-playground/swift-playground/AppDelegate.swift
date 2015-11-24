@@ -17,14 +17,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let nils : [String?] = [nil, "hello", nil]
+        let circle = Circle(diameter: 1.0)
+        let bigCircle = Circle(diameter: 2.0)
         
-        for string in nils {
-            print(string)
-        }
+        print(circle.circumference)
+        print(bigCircle.circumference)
+        
+        
+        
+
         
         return true
     }
+        
+////        let mark = Student(username: "markedwardmurray", firstName: "Mark", lastName: "Murray", email: "markymark@funkybun.ch", phone: "(314) 159-2654")
+//        
+//        let mark = Student(username: "markedwardmurray", firstName: "Mark", lastName: "Murray")
+//        
+//        print("email: \(mark.email)")
+//        print("phone: \(mark.phone)")
+//        
+//        mark.email = "markymark@funkybun.ch"
+//        mark.phone = "(314) 159-2654"
+//        
+//        print("email: \(mark.email)")
+//        print("phone: \(mark.phone)")
+//
+//        
+////        let mark = Student(username: "markedwardmurray", firstName: "Mark", lastName: "Murray")
+////        mark.email = "markymark@funkybun.ch"
+////        mark.phone = "(314) 159-2654"
+////        
+////        mark.firstName = "Marky-Mark"
+////        mark.lastName = "and the Funky Bunch"
+//        
+//        return true
+//    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
