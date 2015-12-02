@@ -6,3 +6,5 @@ Dangling repo:
 https://github.com/learn-co-curriculum/reading-ios-selectors  
 https://github.com/learn-co-curriculum/reading-ios-unitTesting  
 https://github.com/learn-co-curriculum/ios-collections-vol-2
+
+<a href='https://learn.co/lessons/mobile-development-curriculum' data-visibility='hidden'>View this lesson on Learn.co</a>
